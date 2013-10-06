@@ -1,0 +1,14 @@
+body {
+  background-color: white;
+  font-family: sans-serif; }
+
+.wireframe header, .wireframe aside, .wireframe main {
+  background-color: whitesmoke;
+  border: 1px solid gainsboro;
+  font: small sans-serif;
+  text-align: center;
+  color: silver;
+  margin-bottom: 1em; }
+
+.wireframe h1 {
+  font-weight: 100; }

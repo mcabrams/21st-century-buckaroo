@@ -12,8 +12,20 @@ body {
     color: silver;
     margin-bottom: 1em;
   }
-}
 
-.wireframe h1 {
-  font-weight: 100;
+  h1 {
+    font-weight: 100;
+  }
+
+  header {
+    height: 5em;
+  }
+
+  aside {
+    height: 15em;
+  }
+
+  main {
+    height: 50em;
+  }
 }

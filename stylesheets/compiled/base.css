@@ -9,6 +9,11 @@ body {
   text-align: center;
   color: silver;
   margin-bottom: 1em; }
-
 .wireframe h1 {
   font-weight: 100; }
+.wireframe header {
+  height: 5em; }
+.wireframe aside {
+  height: 15em; }
+.wireframe main {
+  height: 50em; }

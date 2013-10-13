@@ -9,5 +9,8 @@
   "author": "Matthew C. Abrams",
   "bugs": {
     "url": "https://github.com/mcabrams/21st-century-buckaroo/issues"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1"
   }
 }

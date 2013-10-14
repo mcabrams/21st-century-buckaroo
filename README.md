@@ -9,4 +9,4 @@ Inspiration for workflow, design patterns, techniques, and overall approach owes
 
 ## Workflow
 
-Run sass -wattch stylesheets/sass:stylesheets/compiled
+Run `grunt`.

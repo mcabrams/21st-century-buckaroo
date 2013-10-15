@@ -39,11 +39,15 @@ module.exports = function(grunt) {
       css: {
         files: '**/*.scss',
         tasks: ['sass'],
-        livereload: true
+        options: {
+          livereload: true
+        }
       },
       html: {
         files: 'index.html',
-        livereload: true
+        options: {
+          livereload: true
+        }
       }
     }
   });

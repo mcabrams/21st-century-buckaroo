@@ -17,9 +17,6 @@ header h1 {
   @include rem-fallback(margin-bottom, 0);
 }
 
-header, .about-me {
-  background-color: yellow;
-}
 .about-me {
   text-align: center;
   @include rem-fallback(margin-bottom, $huge-rem);

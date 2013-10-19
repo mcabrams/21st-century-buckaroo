@@ -1,4 +1,4 @@
-@charset "UTF-8";
+@charset "ASCII-8BIT";
 /*------------------------------------*\
     CONTENTS
 \*------------------------------------*/
@@ -180,4 +180,22 @@ img {
 table {
   width: 100%; }
 
-/*# sourceMappingURL=_normalize.css.map */
+@font-face {
+  font-family: 'Geomancy - Extra Bold';
+  src: url("../../fonts/GeomancyExtraBold.otf"); }
+@font-face {
+  font-family: 'Source Sans Pro - Light';
+  src: url("../../fonts/SourceSansProLight.otf"); }
+body {
+  background-color: white;
+  font-family: 'Source Sans Pro - Light', sans-serif;
+  margin: 4em; }
+
+.wireframe header {
+  height: 5em; }
+.wireframe aside {
+  height: 15em; }
+.wireframe main {
+  height: 50em; }
+
+/*# sourceMappingURL=styles.css.map */

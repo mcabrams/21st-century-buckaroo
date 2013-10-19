@@ -23,22 +23,21 @@ module.exports = function(grunt) {
       }
     },
 
-    sass: {
+    compass: {
       dist: {
-        files: [{
-          expand: true,
-          cwd: 'stylesheets/sass',
-          src: ['*.scss'],
-          dest: 'stylesheets/compiled',
-          ext: '.css'
-        }]
+        options: {
+          sassDir: 'stylesheets/sass/',
+          cssDir: 'stylesheets/compiled/',
+          config: '.compass.rb',
+          trace: true
+        }
       }
     },
 
     watch: {
       css: {
         files: '**/*.scss',
-        tasks: ['sass'],
+        tasks: ['compass'],
         options: {
           livereload: true
         }
@@ -54,7 +53,7 @@ module.exports = function(grunt) {
 
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-open');
-  grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.loadNpmTasks('grunt-contrib-watch');
 
   // Creates the default task (run `grunt` on cli)

@@ -1,0 +1,118 @@
+// ---------------------------------------------------------------------------
+// Imports
+// ---------------------------------------------------------------------------
+
+@import "modular-scale";
+
+// ---------------------------------------------------------------------------
+// Size Functions and Mixins
+// ---------------------------------------------------------------------------
+
+@function -mca-rem-to-px ($rem-value) {
+  @return ( $rem-value*$standard-browser-font-size )/$base-size-rem + px;
+}
+
+@mixin font-size-rem($rem-value) {
+  font-size: -mca-rem-to-px($rem-value);
+  font-size: $rem-value;
+}
+
+@function strip-unit($num) {
+  @return $num / ($num * 0 + 1);
+}
+
+@mixin rem-fallback($property, $values...) {
+  $max: length($values);
+  $pxValues: '';
+  $remValues: '';
+
+  @for $i from 1 through $max {
+    $value: strip-unit(nth($values, $i));
+    $pxValues: #{$pxValues + ( $value*$standard-browser-font-size )/$base-size-unitless}px;
+
+    @if $i < $max {
+      $pxValues: #{$pxValues + " "};
+    }
+  }
+
+  @for $i from 1 through $max {
+    $value: strip-unit(nth($values, $i));
+    $remValues: #{$remValues + $value}rem;
+
+    @if $i < $max {
+      $remValues: #{$remValues + " "};
+    }
+  }
+
+  #{$property}: $pxValues;
+  #{$property}: $remValues;
+}
+
+// ---------------------------------------------------------------------------
+// Size Settings
+// ---------------------------------------------------------------------------
+
+$target-pixel-size: 16;
+$standard-browser-font-size: 16;
+$html-font-size: $target-pixel-size/$standard-browser-font-size;
+$html-font-size-percent: percentage( $html-font-size );
+
+$base-size-rem: 1rem;
+$ratio: major-third() fifth();
+
+$smallest-rem: ms(-3, $base-size-rem, $ratio); /* $smallest-rem: #{$smallest-rem} */
+$smaller-rem:  ms(-2, $base-size-rem, $ratio); /* $smaller-rem:  #{$smaller-rem} */
+$small-rem:    ms(-1, $base-size-rem, $ratio); /* $small-rem:    #{$small-rem} */
+$norm-rem:     ms(0, $base-size-rem, $ratio);  /* $norm-rem:     #{$norm-rem} */
+$large-rem:    ms(1, $base-size-rem, $ratio);  /* $large-rem:    #{$large-rem} */
+$larger-rem:   ms(2, $base-size-rem, $ratio);  /* $larger-rem:   #{$larger-rem} */
+$largest-rem:  ms(3, $base-size-rem, $ratio);  /* $largest-rem:  #{$largest-rem} */
+
+$base-size-unitless: strip-unit($base-size-rem);
+$smallest-unitless: ms(-3, $base-size-rem, $ratio)/$base-size-rem; /* $smallest-unitless: #{$smallest-unitless} */
+$smaller-unitless:  ms(-2, $base-size-rem, $ratio)/$base-size-rem; /* $smaller-unitless:  #{$smaller-unitless} */
+$small-unitless:    ms(-1, $base-size-rem, $ratio)/$base-size-rem; /* $small-unitless:    #{$small-unitless} */
+$norm-unitless:     ms(0, $base-size-rem, $ratio)/$base-size-rem;  /* $norm-unitless:     #{$norm-unitless} */
+$large-unitless:    ms(1, $base-size-rem, $ratio)/$base-size-rem;  /* $large-unitless:    #{$large-unitless} */
+$larger-unitless:   ms(2, $base-size-rem, $ratio)/$base-size-rem;  /* $larger-unitless:   #{$larger-unitless} */
+$largest-unitless:  ms(3, $base-size-rem, $ratio)/$base-size-rem;  /* $largest-unitless:  #{$largest-unitless} */
+
+
+// ---------------------------------------------------------------------------
+// Styles
+// ---------------------------------------------------------------------------
+
+body {
+  font-family: 'Source Sans Pro - Light', sans-serif;
+  font-size: $html-font-size-percent;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Source Sans Pro - Black', sans-serif;
+  line-height: $larger-unitless;
+  @include rem-fallback(margin-bottom, $small-rem);
+}
+
+h1 {
+  @include rem-fallback(font-size, $large-rem);
+  line-height: $large-unitless;
+}
+
+// ---------------------------------------------------------------------------
+// Font-faces
+// ---------------------------------------------------------------------------
+
+@font-face {
+  font-family: 'Geomancy - Extra Bold';
+  src: url('../../fonts/GeomancyExtraBold.otf');
+}
+
+@font-face {
+  font-family: 'Source Sans Pro - Light';
+  src: url('../../fonts/SourceSansProLight.otf');
+}
+
+@font-face {
+  font-family: 'Source Sans Pro - Black';
+  src: url('../../fonts/SourceSansProBlack.otf');
+}

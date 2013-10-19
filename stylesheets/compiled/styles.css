@@ -14,6 +14,7 @@ TABLES
 /*
 A more considered reset; more of a restart... As per: csswizardry.com/2011/10/reset-restarted
 */
+/* line 33, ../sass/_normalize.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre, hr,
 a, abbr, address, cite, code,
@@ -27,175 +28,300 @@ article, aside, canvas, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section, summary,
 time, mark, audio, video {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+}
 
+/* line 38, ../sass/_normalize.scss */
 article, aside, details, figcaption, figure, footer,
 header, hgroup, menu, nav, section {
-  display: block; }
+  display: block;
+}
 
+/* line 41, ../sass/_normalize.scss */
 h1, h2, h3, h4, h5, h6 {
-  font-size: 100%; }
+  font-size: 100%;
+}
 
+/* line 44, ../sass/_normalize.scss */
 table {
   border-collapse: collapse;
-  border-spacing: 0; }
+  border-spacing: 0;
+}
 
+/* line 48, ../sass/_normalize.scss */
 strong, b, mark {
   font-weight: bold;
-  font-style: inherit; }
+  font-style: inherit;
+}
 
+/* line 52, ../sass/_normalize.scss */
 em, i, cite, q, address, dfn, var {
   font-style: italic;
-  font-weight: inherit; }
+  font-weight: inherit;
+}
 
+/* line 56, ../sass/_normalize.scss */
 abbr[title], dfn[title] {
   cursor: help;
-  border-bottom: 1px dotted; }
+  border-bottom: 1px dotted;
+}
 
+/* line 60, ../sass/_normalize.scss */
 ins {
-  border-bottom: 1px solid; }
+  border-bottom: 1px solid;
+}
 
+/* line 63, ../sass/_normalize.scss */
 a, u, ins {
-  text-decoration: none; }
+  text-decoration: none;
+}
 
+/* line 66, ../sass/_normalize.scss */
 del, s {
-  text-decoration: line-through; }
+  text-decoration: line-through;
+}
 
+/* line 69, ../sass/_normalize.scss */
 pre, code, samp, kbd {
-  font-family: monospace; }
+  font-family: monospace;
+}
 
+/* line 72, ../sass/_normalize.scss */
 small {
-  font-size: 0.75em; }
+  font-size: 0.75em;
+}
 
+/* line 75, ../sass/_normalize.scss */
 img {
   border: none;
-  font-style: italic; }
+  font-style: italic;
+}
 
+/* line 81, ../sass/_normalize.scss */
 input,
 select, option, optgroup,
 textarea {
-  font: inherit; }
+  font: inherit;
+}
 
 /*
 Form items have always missed cursor interactions...
 */
+/* line 93, ../sass/_normalize.scss */
 label,
 input,
 textarea,
 button,
 select,
 option {
-  cursor: pointer; }
+  cursor: pointer;
+}
 
+/* line 99, ../sass/_normalize.scss */
 .text-input:active,
 .text-input:focus,
 textarea:active,
 textarea:focus {
-  cursor: text; }
+  cursor: text;
+}
 
 /*------------------------------------*\
     $MAIN
 \*------------------------------------*/
+/* line 110, ../sass/_normalize.scss */
 html {
   overflow-y: scroll;
   line-height: 1.5;
-  /* A safe and comfortable default for body copy at any size. */ }
+  /* A safe and comfortable default for body copy at any size. */
+}
 
 /*--- LINKS ---*/
+/* line 123, ../sass/_normalize.scss */
 a:hover,
 a:focus,
 a:active {
-  text-decoration: underline; }
+  text-decoration: underline;
+}
 
 /* Basic styling for any 'current' links. */
+/* line 128, ../sass/_normalize.scss */
 .current a {
   cursor: text;
-  text-decoration: underline; }
+  text-decoration: underline;
+}
 
 /*--- LISTS ---*/
+/* line 135, ../sass/_normalize.scss */
 li > ul,
 li > ol {
-  margin-bottom: 0; }
+  margin-bottom: 0;
+}
 
 /*--- QUOTES ---*/
 /*
 Big up @boblet: html5doctor.com/blockquote-q-cite
 */
+/* line 143, ../sass/_normalize.scss */
 q {
-  quotes: "‘" "’" "“" "”"; }
+  quotes: "‘" "’" "“" "”";
+}
 
+/* line 145, ../sass/_normalize.scss */
 q:before {
   content: "‘";
-  content: open-quote; }
+  content: open-quote;
+}
 
+/* line 146, ../sass/_normalize.scss */
 q:after {
   content: "’";
-  content: close-quote; }
+  content: close-quote;
+}
 
+/* line 148, ../sass/_normalize.scss */
 q q:before {
   content: "“";
-  content: open-quote; }
+  content: open-quote;
+}
 
+/* line 149, ../sass/_normalize.scss */
 q q:after {
   content: "”";
-  content: close-quote; }
+  content: close-quote;
+}
 
+/* line 151, ../sass/_normalize.scss */
 blockquote {
-  quotes: "“" "”"; }
+  quotes: "“" "”";
+}
 
+/* line 152, ../sass/_normalize.scss */
 blockquote p:before {
   content: "“";
-  content: open-quote; }
+  content: open-quote;
+}
 
+/* line 153, ../sass/_normalize.scss */
 blockquote p:after {
   content: "";
-  content: no-close-quote; }
+  content: no-close-quote;
+}
 
+/* line 154, ../sass/_normalize.scss */
 blockquote p:last-of-type:after {
   content: "”";
-  content: close-quote; }
+  content: close-quote;
+}
 
+/* line 156, ../sass/_normalize.scss */
 blockquote {
-  text-indent: -0.4em; }
+  text-indent: -0.4em;
+}
 
+/* line 159, ../sass/_normalize.scss */
 .source {
   display: block;
   text-indent: 0;
   margin-top: -Xpx;
-  margin-top: -Xrem; }
+  margin-top: -Xrem;
+}
 
+/* line 165, ../sass/_normalize.scss */
 .source:before {
-  content: "—"; }
+  content: "—";
+}
 
 /*------------------------------------*\
     $IMAGES
 \*------------------------------------*/
+/* line 176, ../sass/_normalize.scss */
 img {
   max-width: 100%;
-  height: auto; }
+  height: auto;
+}
 
 /*------------------------------------*\
     $TABLES
 \*------------------------------------*/
+/* line 188, ../sass/_normalize.scss */
 table {
-  width: 100%; }
+  width: 100%;
+}
 
+/* $smallest-rem: 0.64rem */
+/* $smaller-rem:  0.66667rem */
+/* $small-rem:    0.8rem */
+/* $norm-rem:     1rem */
+/* $large-rem:    1.25rem */
+/* $larger-rem:   1.5rem */
+/* $largest-rem:  1.5625rem */
+/* $smallest-unitless: 0.64 */
+/* $smaller-unitless:  0.66667 */
+/* $small-unitless:    0.8 */
+/* $norm-unitless:     1 */
+/* $large-unitless:    1.25 */
+/* $larger-unitless:   1.5 */
+/* $largest-unitless:  1.5625 */
+/* line 85, ../sass/_typography.scss */
+body {
+  font-family: 'Source Sans Pro - Light', sans-serif;
+  font-size: 100%;
+}
+
+/* line 90, ../sass/_typography.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Source Sans Pro - Black', sans-serif;
+  line-height: 1.5;
+  margin-bottom: 12.8px;
+  margin-bottom: 0.8rem;
+}
+
+/* line 96, ../sass/_typography.scss */
+h1 {
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 1.25;
+}
+
+@font-face {
+  font-family: 'Geomancy - Extra Bold';
+  src: url("../../fonts/GeomancyExtraBold.otf");
+}
+
+@font-face {
+  font-family: 'Source Sans Pro - Light';
+  src: url("../../fonts/SourceSansProLight.otf");
+}
+
+@font-face {
+  font-family: 'Source Sans Pro - Black';
+  src: url("../../fonts/SourceSansProBlack.otf");
+}
+
+/* line 1, ../sass/_base.scss */
 body {
   background-color: white;
-  font-family: sans-serif; }
+  margin: 2em;
+}
 
-.wireframe header, .wireframe aside, .wireframe main {
-  background-color: whitesmoke;
-  border: 1px solid gainsboro;
-  font: small sans-serif;
+/* line 6, ../sass/_base.scss */
+header {
+  margin-bottom: 1em;
+}
+
+/* line 10, ../sass/_base.scss */
+header h1 {
+  font-family: 'Geomancy - Extra Bold';
   text-align: center;
-  color: silver;
-  margin-bottom: 1em; }
-.wireframe h1 {
-  font-weight: 100; }
-.wireframe header {
-  height: 5em; }
-.wireframe aside {
-  height: 15em; }
-.wireframe main {
-  height: 50em; }
+}
+
+/* line 15, ../sass/_base.scss */
+.about-me {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+/* line 1, ../sass/_layout.scss */
+.articles-list {
+  list-style: none;
+}

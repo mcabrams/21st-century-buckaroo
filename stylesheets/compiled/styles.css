@@ -25,7 +25,7 @@ dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section, summary,
+footer, header, hgroup, main, menu, nav, section, summary,
 time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -33,7 +33,7 @@ time, mark, audio, video {
 
 /* line 38, ../sass/_normalize.scss */
 article, aside, details, figcaption, figure, footer,
-header, hgroup, menu, nav, section {
+header, hgroup, main, menu, nav, section {
   display: block;
 }
 
@@ -55,7 +55,7 @@ strong, b, mark {
 }
 
 /* line 52, ../sass/_normalize.scss */
-em, i, cite, q, address, dfn, var {
+em, i, cite, address, dfn, var {
   font-style: italic;
   font-weight: inherit;
 }
@@ -163,30 +163,30 @@ Big up @boblet: html5doctor.com/blockquote-q-cite
 */
 /* line 143, ../sass/_normalize.scss */
 q {
-  quotes: "‘" "’" "“" "”";
+  quotes: "“" "”" "‘" "’";
 }
 
 /* line 145, ../sass/_normalize.scss */
 q:before {
-  content: "‘";
+  content: "“";
   content: open-quote;
 }
 
 /* line 146, ../sass/_normalize.scss */
 q:after {
-  content: "’";
+  content: "”";
   content: close-quote;
 }
 
 /* line 148, ../sass/_normalize.scss */
 q q:before {
-  content: "“";
+  content: "‘";
   content: open-quote;
 }
 
 /* line 149, ../sass/_normalize.scss */
 q q:after {
-  content: "”";
+  content: "’";
   content: close-quote;
 }
 
@@ -248,39 +248,52 @@ table {
   width: 100%;
 }
 
-/* $smallest-rem: 0.64rem */
-/* $smaller-rem:  0.66667rem */
-/* $small-rem:    0.8rem */
-/* $norm-rem:     1rem */
-/* $large-rem:    1.25rem */
-/* $larger-rem:   1.5rem */
-/* $largest-rem:  1.5625rem */
-/* $smallest-unitless: 0.64 */
-/* $smaller-unitless:  0.66667 */
-/* $small-unitless:    0.8 */
-/* $norm-unitless:     1 */
-/* $large-unitless:    1.25 */
-/* $larger-unitless:   1.5 */
-/* $largest-unitless:  1.5625 */
-/* line 85, ../sass/_typography.scss */
+/* $tiniest-rem:  0.44444rem  */
+/* $tiny-rem:     0.512rem     */
+/* $smallest-rem: 0.66667rem */
+/* $smaller-rem:  0.8rem  */
+/* $small-rem:    1rem    */
+/* $norm-rem:     1.25rem     */
+/* $large-rem:    1.5rem    */
+/* $larger-rem:   1.95313rem   */
+/* $largest-rem:  2.25rem  */
+/* $huge-rem:     2.44141rem     */
+/* $huge-rem:     2.44141rem     */
+/* $tiniest-unitless:  0.44444  */
+/* $tiny-unitless:     0.512     */
+/* $smallest-unitless: 0.66667 */
+/* $smaller-unitless:  0.8  */
+/* $small-unitless:    1    */
+/* $norm-unitless:     1.25     */
+/* $large-unitless:    1.5    */
+/* $larger-unitless:   1.95313   */
+/* $largest-unitless:  2.25  */
+/* $huge-unitless:     2.44141     */
+/* $epic-unitless:     2.44141     */
+/* line 96, ../sass/_typography.scss */
 body {
   font-family: 'Source Sans Pro - Light', sans-serif;
-  font-size: 100%;
+  font-size: 112.5%;
 }
 
-/* line 90, ../sass/_typography.scss */
+/* line 101, ../sass/_typography.scss */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Source Sans Pro - Black', sans-serif;
-  line-height: 1.5;
+  line-height: 1.25;
   margin-bottom: 12.8px;
   margin-bottom: 0.8rem;
 }
 
-/* line 96, ../sass/_typography.scss */
+/* line 107, ../sass/_typography.scss */
 h1 {
-  font-size: 20px;
-  font-size: 1.25rem;
-  line-height: 1.25;
+  font-size: 24px;
+  font-size: 1.5rem;
+}
+
+/* line 111, ../sass/_typography.scss */
+p {
+  margin-bottom: 10.66667px;
+  margin-bottom: 0.66667rem;
 }
 
 @font-face {
@@ -294,6 +307,11 @@ h1 {
 }
 
 @font-face {
+  font-family: 'Source Sans Pro - Regular';
+  src: url("../../fonts/SourceSansProRegular.otf");
+}
+
+@font-face {
   font-family: 'Source Sans Pro - Black';
   src: url("../../fonts/SourceSansProBlack.otf");
 }
@@ -301,24 +319,62 @@ h1 {
 /* line 1, ../sass/_base.scss */
 body {
   background-color: white;
-  margin: 2em;
 }
 
-/* line 6, ../sass/_base.scss */
-header {
-  margin-bottom: 1em;
+/* line 5, ../sass/_base.scss */
+.wrapper-container > * {
+  padding: 0px 24px;
+  padding: 0rem 1.5rem;
 }
 
-/* line 10, ../sass/_base.scss */
+/* line 9, ../sass/_base.scss */
+.wrapper-container > *:first-child {
+  padding-top: 39.0625px;
+  padding-top: 2.44141rem;
+}
+
+/* line 13, ../sass/_base.scss */
 header h1 {
   font-family: 'Geomancy - Extra Bold';
   text-align: center;
+  font-size: 36px;
+  font-size: 2.25rem;
+  margin-bottom: 0px;
+  margin-bottom: 0rem;
 }
 
-/* line 15, ../sass/_base.scss */
+/* line 20, ../sass/_base.scss */
+header, .about-me {
+  background-color: yellow;
+}
+
+/* line 23, ../sass/_base.scss */
 .about-me {
   text-align: center;
-  margin-bottom: 1em;
+  margin-bottom: 39.0625px;
+  margin-bottom: 2.44141rem;
+  padding: 24px;
+  padding: 1.5rem;
+}
+
+/* line 29, ../sass/_base.scss */
+.articles-list article {
+  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
+  padding-bottom: 24px;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px black solid;
+}
+/* line 34, ../sass/_base.scss */
+.articles-list article h1 {
+  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
+}
+/* line 38, ../sass/_base.scss */
+.articles-list article time {
+  display: inline-block;
+  margin-bottom: 3.55556px;
+  margin-bottom: 0.22222rem;
 }
 
 /* line 1, ../sass/_layout.scss */

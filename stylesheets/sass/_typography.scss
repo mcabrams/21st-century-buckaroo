@@ -12,11 +12,6 @@
   @return ( $rem-value*$standard-browser-font-size )/$base-size-rem + px;
 }
 
-@mixin font-size-rem($rem-value) {
-  font-size: -mca-rem-to-px($rem-value);
-  font-size: $rem-value;
-}
-
 @function strip-unit($num) {
   @return $num / ($num * 0 + 1);
 }

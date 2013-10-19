@@ -270,13 +270,13 @@ table {
 /* $largest-unitless:  2.25  */
 /* $huge-unitless:     2.44141     */
 /* $epic-unitless:     2.44141     */
-/* line 96, ../sass/_typography.scss */
+/* line 91, ../sass/_typography.scss */
 body {
   font-family: 'Source Sans Pro - Light', sans-serif;
   font-size: 112.5%;
 }
 
-/* line 101, ../sass/_typography.scss */
+/* line 96, ../sass/_typography.scss */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Source Sans Pro - Black', sans-serif;
   line-height: 1.25;
@@ -284,13 +284,13 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0.8rem;
 }
 
-/* line 107, ../sass/_typography.scss */
+/* line 102, ../sass/_typography.scss */
 h1 {
   font-size: 24px;
   font-size: 1.5rem;
 }
 
-/* line 111, ../sass/_typography.scss */
+/* line 106, ../sass/_typography.scss */
 p {
   margin-bottom: 10.66667px;
   margin-bottom: 0.66667rem;

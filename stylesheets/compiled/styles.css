@@ -321,19 +321,19 @@ body {
   background-color: white;
 }
 
-/* line 5, ../sass/_base.scss */
+/* line 1, ../sass/_layout.scss */
 .wrapper-container > * {
   padding: 0px 24px;
   padding: 0rem 1.5rem;
 }
 
-/* line 9, ../sass/_base.scss */
+/* line 5, ../sass/_layout.scss */
 .wrapper-container > *:first-child {
   padding-top: 39.0625px;
   padding-top: 2.44141rem;
 }
 
-/* line 13, ../sass/_base.scss */
+/* line 9, ../sass/_layout.scss */
 header h1 {
   font-family: 'Geomancy - Extra Bold';
   text-align: center;
@@ -343,7 +343,7 @@ header h1 {
   margin-bottom: 0rem;
 }
 
-/* line 20, ../sass/_base.scss */
+/* line 16, ../sass/_layout.scss */
 .about-me {
   text-align: center;
   margin-bottom: 39.0625px;
@@ -352,7 +352,11 @@ header h1 {
   padding: 1.5rem;
 }
 
-/* line 26, ../sass/_base.scss */
+/* line 22, ../sass/_layout.scss */
+.articles-list {
+  list-style: none;
+}
+/* line 25, ../sass/_layout.scss */
 .articles-list article {
   margin-bottom: 24px;
   margin-bottom: 1.5rem;
@@ -360,19 +364,14 @@ header h1 {
   padding-bottom: 1.5rem;
   border-bottom: 1px black solid;
 }
-/* line 31, ../sass/_base.scss */
+/* line 30, ../sass/_layout.scss */
 .articles-list article h1 {
   margin-bottom: 20px;
   margin-bottom: 1.25rem;
 }
-/* line 35, ../sass/_base.scss */
+/* line 34, ../sass/_layout.scss */
 .articles-list article time {
   display: inline-block;
   margin-bottom: 3.55556px;
   margin-bottom: 0.22222rem;
-}
-
-/* line 1, ../sass/_layout.scss */
-.articles-list {
-  list-style: none;
 }

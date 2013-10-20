@@ -1,0 +1,32 @@
+.hero {
+  background-color: yellow;
+
+  h1 {
+    font-family: 'Geomancy - Extra Bold';
+    text-align: center;
+    @include rem-fallback(font-size, $largest-rem);
+  }
+}
+
+.hero-about-me {
+  text-align: center;
+}
+
+.articles-feed {
+  list-style: none;
+
+  article {
+    @include rem-fallback(margin-bottom, $base-margin-rem);
+    @include rem-fallback(padding-bottom, $base-margin-rem);
+    border-bottom: 1px black solid;
+
+    h1 {
+      @include rem-fallback(margin-bottom, $norm-rem);
+    }
+
+    time {
+      display: inline-block;
+      @include rem-fallback(margin-bottom, $tiniest-rem/2);
+    }
+  }
+}

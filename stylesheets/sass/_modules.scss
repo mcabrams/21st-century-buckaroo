@@ -26,7 +26,12 @@
 
     time {
       display: inline-block;
-      @include rem-fallback(margin-bottom, $tiniest-rem/2);
+      @include rem-fallback(margin-bottom, $micro-rem);
     }
   }
+}
+
+.article-snippet {
+  text-indent: 0;
+  @include rem-fallback(padding-bottom, $micro-rem);
 }

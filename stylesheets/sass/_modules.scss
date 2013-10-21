@@ -16,9 +16,9 @@
   list-style: none;
 
   article {
+    border-bottom: 1px black solid;
     @include rem-fallback(margin-bottom, $base-margin-rem);
     @include rem-fallback(padding-bottom, $base-margin-rem);
-    border-bottom: 1px black solid;
 
     h1 {
       @include rem-fallback(margin-bottom, $norm-rem);

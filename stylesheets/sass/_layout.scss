@@ -1,4 +1,6 @@
-$bp-small: -mca-px-to-rem(550px);
+@import 'breakpoint';
+
+$bp-small: -mca-px-to-rem(510px);
 
 .wrapper-container > * {
   @include rem-fallback(padding, $base-margin-rem, $base-margin-rem);

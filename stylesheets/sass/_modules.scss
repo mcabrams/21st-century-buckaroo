@@ -1,14 +1,15 @@
-.hero {
+header {
   background-color: yellow;
 
   h1 {
     font-family: 'Geomancy - Extra Bold';
     text-align: center;
     @include rem-fallback(font-size, $largest-rem);
+    @include margin-bottom-rem-fallback(0, $largest-rem, $norm-unitless);
   }
 }
 
-.hero-about-me {
+.about-me {
   text-align: center;
 }
 
@@ -21,7 +22,7 @@
     @include rem-fallback(padding-bottom, $base-margin-rem);
 
     h1 {
-      @include rem-fallback(margin-bottom, $norm-rem);
+      @include margin-bottom-rem-fallback($large-rem, $norm-unitless, $norm-rem);
     }
 
     time {

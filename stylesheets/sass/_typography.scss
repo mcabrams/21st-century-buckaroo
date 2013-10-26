@@ -20,6 +20,10 @@
   @return $num / ($num * 0 + 1);
 }
 
+@function extra-margin-from-line-height($font-size, $line-height) {
+  @return ($line-height - 1)*$font-size;
+}
+
 @mixin rem-fallback($property, $values...) {
   $max: length($values);
   $pxValues: '';
@@ -45,6 +49,11 @@
 
   #{$property}: $pxValues;
   #{$property}: $remValues;
+}
+
+@mixin margin-bottom-rem-fallback($val, $font-size, $line-height) {
+  $final-margin-bottom: $val - extra-margin-from-line-height($font-size, $line-height);
+  @include rem-fallback(margin-bottom, $final-margin-bottom);
 }
 
 // ---------------------------------------------------------------------------
@@ -104,11 +113,11 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Source Sans Pro - Black', sans-serif;
   line-height: $norm-unitless;
-  @include rem-fallback(margin-bottom, $smaller-rem);
 }
 
 h1 {
   @include rem-fallback(font-size, $large-rem);
+  @include margin-bottom-rem-fallback($smaller-rem, $large-rem, $norm-unitless);
 }
 
 p {

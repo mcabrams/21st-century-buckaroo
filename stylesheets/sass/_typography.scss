@@ -97,7 +97,7 @@ $largest-unitless:  strip-unit($largest-rem);  /* $largest-unitless:  #{$largest
 $huge-unitless:     strip-unit($huge-rem);     /* $huge-unitless:     #{$huge-unitless}     */
 $epic-unitless:     strip-unit($epic-rem);     /* $epic-unitless:     #{$epic-unitless}     */
 
-$base-margin-rem: $large-rem;
+$base-margin-rem: $small-rem;
 $big-break-margin-rem: $huge-rem;
 $base-line-height: $large-unitless;
 

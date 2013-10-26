@@ -1,6 +1,8 @@
-header {
-  background-color: yellow;
+header, .about-me {
+  border-bottom: 1px $lightGrey dashed;
+}
 
+header {
   h1 {
     font-family: 'Geomancy - Extra Bold';
     text-align: center;
@@ -16,8 +18,8 @@ header {
 .articles-feed {
   list-style: none;
 
-  article {
-    border-bottom: 1px black solid;
+  li {
+    border-bottom: 1px $lightGrey dashed;
     @include rem-fallback(margin-bottom, $base-margin-rem);
     @include rem-fallback(padding-bottom, $base-margin-rem);
 
@@ -28,6 +30,12 @@ header {
     time {
       display: inline-block;
       @include rem-fallback(margin-bottom, $micro-rem);
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: 0;
     }
   }
 }

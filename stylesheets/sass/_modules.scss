@@ -25,8 +25,8 @@
 
   li {
     border-bottom: 1px $brownBlack solid;
-    @include rem-fallback(margin-bottom, $base-margin-rem);
-    @include rem-fallback(padding-bottom, $base-margin-rem);
+    @include rem-fallback(margin-bottom, $norm-rem);
+    @include rem-fallback(padding-bottom, $norm-rem);
 
     h1 {
       @include margin-bottom-rem-fallback($large-rem, $norm-unitless, $norm-rem);
@@ -34,7 +34,7 @@
 
     time {
       display: inline-block;
-      @include rem-fallback(margin-bottom, $micro-rem);
+      @include rem-fallback(margin-bottom, $norm-rem);
     }
 
     &:last-child {
@@ -47,5 +47,5 @@
 
 .article-snippet {
   text-indent: 0;
-  @include rem-fallback(padding-bottom, $micro-rem);
+  @include rem-fallback(padding-bottom, $norm-rem);
 }

@@ -108,9 +108,14 @@ $base-line-height: $large-unitless;
 body {
   font-family: 'Source Sans Pro - Light', sans-serif;
   font-size: $html-font-size-percent;
+
+  @media all and (min-width: 32rem) {
+    font-size: $html-font-size-percent*1.2;
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
+  text-transform: uppercase;
   font-family: 'Source Sans Pro - Black', sans-serif;
   line-height: $norm-unitless;
 }

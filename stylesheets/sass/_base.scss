@@ -3,14 +3,17 @@
 // ---------------------------------------------------------------------------
 
 $white: #ffffff;
-$yellow: #FF0;
-$lightGrey: #d3d3d3;
+$brownBlack: #221d1a;
+$yellow: #FF7;
 $lightBlue: #e7faff;
+$lightRed: #e46a59;
+$antiqueWhite: #e8e2d2;
 
 // ---------------------------------------------------------------------------
 // Base Styles
 // ---------------------------------------------------------------------------
 
 body {
-  background-color: $white;
+  background-color: $antiqueWhite;
+  color: $brownBlack;
 }

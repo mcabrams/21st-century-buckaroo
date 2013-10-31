@@ -1,8 +1,13 @@
-header, .about-me {
-  border-bottom: 1px $lightGrey dashed;
+.buckaroo-header, .about-me {
+  background: $lightRed;
 }
 
-header {
+.about-me {
+  color: antiqueWhite;
+  padding-top: 0;
+}
+
+.buckaroo-header {
   h1 {
     font-family: 'Geomancy - Extra Bold';
     text-align: center;
@@ -19,7 +24,7 @@ header {
   list-style: none;
 
   li {
-    border-bottom: 1px $lightGrey dashed;
+    border-bottom: 1px $brownBlack solid;
     @include rem-fallback(margin-bottom, $base-margin-rem);
     @include rem-fallback(padding-bottom, $base-margin-rem);
 

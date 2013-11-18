@@ -15,23 +15,24 @@ $antiqueWhite: #e8e2d2;
 // Base Styles
 // ---------------------------------------------------------------------------
 
-
 body {
   background-color: $antiqueWhite;
   color: $brownBlack;
 }
 
 a:link {
+  display: inline-block;
+  line-height: 1;
   color: $antiqueWhite;
   @include border-radius(4px, 4px);
   background-color: $lightRed;
-  padding: 5px;
+  padding: $tiny-rem;
   text-decoration: none;
 }
 
-/* a:visited { */
-  /* color: purple; */
-/* } */
+a:visited {
+  color: $antiqueWhite;
+}
 
 /* a:hover { */
   /* color: red; */

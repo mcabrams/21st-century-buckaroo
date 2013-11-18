@@ -33,7 +33,7 @@
     }
 
     time {
-      display: inline-block;
+      display: block;
       @include rem-fallback(margin-bottom, $norm-rem);
     }
 

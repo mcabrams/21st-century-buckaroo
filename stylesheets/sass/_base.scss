@@ -4,34 +4,34 @@
 // Variables
 // ---------------------------------------------------------------------------
 
-$white: #ffffff;
-$brownBlack: #221d1a;
-$yellow: #FF7;
-$lightBlue: #e7faff;
-$lightRed: #e46a59;
-$antiqueWhite: #e8e2d2;
+$white: #fff;
+$brown-black: #221d1a;
+$yellow: #ff7;
+$light-blue: #e7faff;
+$light-red: #ec7a6a;
+$antique-white: #e8e2d2;
 
 // ---------------------------------------------------------------------------
 // Base Styles
 // ---------------------------------------------------------------------------
 
 body {
-  background-color: $antiqueWhite;
-  color: $brownBlack;
+  background-color: $antique-white;
+  color: $brown-black;
 }
 
 a:link {
   display: inline-block;
   line-height: 1;
-  color: $antiqueWhite;
+  color: $antique-white;
   @include border-radius(4px, 4px);
-  background-color: $lightRed;
+  background-color: $light-red;
   padding: $tiny-rem;
   text-decoration: none;
 }
 
 a:visited {
-  color: $antiqueWhite;
+  color: $antique-white;
 }
 
 /* a:hover { */

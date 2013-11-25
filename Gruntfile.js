@@ -37,7 +37,7 @@ module.exports = function(grunt) {
     watch: {
       css: {
         files: '**/*.scss',
-        tasks: ['compass'],
+        tasks: ['compass', 'shell'],
         options: {
           livereload: true
         }
@@ -48,13 +48,19 @@ module.exports = function(grunt) {
           livereload: true
         }
       }
+    },
+
+    shell: {
+      scssLint: {
+        command: 'echo -e "\e[0;31m`scss-lint --exclude-linter Comment stylesheets/sass/`"',
+        options: {
+          stdout: true
+        }
+      }
     }
   });
 
-  grunt.loadNpmTasks('grunt-contrib-connect');
-  grunt.loadNpmTasks('grunt-open');
-  grunt.loadNpmTasks('grunt-contrib-compass');
-  grunt.loadNpmTasks('grunt-contrib-watch');
+  require('load-grunt-tasks')(grunt);
 
   // Creates the default task (run `grunt` on cli)
   grunt.registerTask('default', [

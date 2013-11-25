@@ -4,6 +4,14 @@ $bp-small: -mca-px-to-rem(510px);
 
 .wrapper-container > * {
   @include rem-fallback(padding, $norm-rem, $norm-rem);
+  @media screen and (min-width: 32rem) {
+    @include rem-fallback(padding, $largest-rem);
+  }
+}
+
+main {
+  margin: 0 auto;
+  max-width: 48rem;
 }
 
 p:last-child {

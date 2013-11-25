@@ -68,34 +68,36 @@ $html-font-size-percent: percentage( $html-font-size );
 $base-size-rem: 1rem;
 $ratio: major-third() fifth();
 
-$micro-rem:    ms(-7, $base-size-rem, $ratio);  /* $micro-rem:       #{$micro-rem}    */
-$tiniest-rem:  ms(-5, $base-size-rem, $ratio);  /* $tiniest-rem:     #{$tiniest-rem}  */
-$tiny-rem:     ms(-4, $base-size-rem, $ratio);  /* $tiny-rem:        #{$tiny-rem}     */
-$smallest-rem: ms(-2, $base-size-rem, $ratio);  /* $smallest-rem:    #{$smallest-rem} */
-$smaller-rem:  ms(-1, $base-size-rem, $ratio);  /* $smaller-rem:     #{$smaller-rem}  */
-$small-rem:    ms(0, $base-size-rem, $ratio);   /* $small-rem:       #{$small-rem}    */
-$norm-rem:     ms(1, $base-size-rem, $ratio);   /* $norm-rem:        #{$norm-rem}     */
-$large-rem:    ms(2, $base-size-rem, $ratio);   /* $large-rem:       #{$large-rem}    */
-$larger-rem:   ms(4, $base-size-rem, $ratio);   /* $larger-rem:      #{$larger-rem}   */
-$largest-rem:  ms(5, $base-size-rem, $ratio);   /* $largest-rem:     #{$largest-rem}  */
-$huge-rem:     ms(6, $base-size-rem, $ratio);   /* $huge-rem:        #{$huge-rem}     */
-$epic-rem:     ms(7, $base-size-rem, $ratio);   /* $epic-rem:        #{$epic-rem}     */
+$micro-rem:     ms(-7, $base-size-rem, $ratio);  /* $micro-rem:       #{$micro-rem}     */
+$tiniest-rem:   ms(-5, $base-size-rem, $ratio);  /* $tiniest-rem:     #{$tiniest-rem}   */
+$tiny-rem:      ms(-4, $base-size-rem, $ratio);  /* $tiny-rem:        #{$tiny-rem}      */
+$smallest-rem:  ms(-2, $base-size-rem, $ratio);  /* $smallest-rem:    #{$smallest-rem}  */
+$smaller-rem:   ms(-1, $base-size-rem, $ratio);  /* $smaller-rem:     #{$smaller-rem}   */
+$small-rem:     ms(0, $base-size-rem, $ratio);   /* $small-rem:       #{$small-rem}     */
+$norm-rem:      ms(1, $base-size-rem, $ratio);   /* $norm-rem:        #{$norm-rem}      */
+$large-rem:     ms(2, $base-size-rem, $ratio);   /* $large-rem:       #{$large-rem}     */
+$larger-rem:    ms(5, $base-size-rem, $ratio);   /* $larger-rem:      #{$larger-rem}    */
+$largest-rem:   ms(6, $base-size-rem, $ratio);   /* $largest-rem:     #{$largest-rem}   */
+$huge-rem:      ms(8, $base-size-rem, $ratio);   /* $huge-rem:        #{$huge-rem}      */
+$epic-rem:      ms(9, $base-size-rem, $ratio);   /* $epic-rem:        #{$epic-rem}      */
+$epicisimo-rem: ms(10, $base-size-rem, $ratio);  /* $epicisimo-rem:   #{$epicisimo-rem} */
 
 $base-size-unitless: strip-unit($base-size-rem);
 
 
-$micro-unitless:    strip-unit($micro-rem);    /* $micro-unitless:    #{$micro-unitless}  */
-$tiniest-unitless:  strip-unit($tiniest-rem);  /* $tiniest-unitless:  #{$tiniest-unitless}  */
-$tiny-unitless:     strip-unit($tiny-rem);     /* $tiny-unitless:     #{$tiny-unitless}     */
-$smallest-unitless: strip-unit($smallest-rem); /* $smallest-unitless: #{$smallest-unitless} */
-$smaller-unitless:  strip-unit($smaller-rem);  /* $smaller-unitless:  #{$smaller-unitless}  */
-$small-unitless:    strip-unit($small-rem);    /* $small-unitless:    #{$small-unitless}    */
-$norm-unitless:     strip-unit($norm-rem);     /* $norm-unitless:     #{$norm-unitless}     */
-$large-unitless:    strip-unit($large-rem);    /* $large-unitless:    #{$large-unitless}    */
-$larger-unitless:   strip-unit($larger-rem);   /* $larger-unitless:   #{$larger-unitless}   */
-$largest-unitless:  strip-unit($largest-rem);  /* $largest-unitless:  #{$largest-unitless}  */
-$huge-unitless:     strip-unit($huge-rem);     /* $huge-unitless:     #{$huge-unitless}     */
-$epic-unitless:     strip-unit($epic-rem);     /* $epic-unitless:     #{$epic-unitless}     */
+$micro-unitless:     strip-unit($micro-rem);     /* $micro-unitless:     #{$micro-unitless}     */
+$tiniest-unitless:   strip-unit($tiniest-rem);   /* $tiniest-unitless:   #{$tiniest-unitless}   */
+$tiny-unitless:      strip-unit($tiny-rem);      /* $tiny-unitless:      #{$tiny-unitless}      */
+$smallest-unitless:  strip-unit($smallest-rem);  /* $smallest-unitless:  #{$smallest-unitless}  */
+$smaller-unitless:   strip-unit($smaller-rem);   /* $smaller-unitless:   #{$smaller-unitless}   */
+$small-unitless:     strip-unit($small-rem);     /* $small-unitless:     #{$small-unitless}     */
+$norm-unitless:      strip-unit($norm-rem);      /* $norm-unitless:      #{$norm-unitless}      */
+$large-unitless:     strip-unit($large-rem);     /* $large-unitless:     #{$large-unitless}     */
+$larger-unitless:    strip-unit($larger-rem);    /* $larger-unitless:    #{$larger-unitless}    */
+$largest-unitless:   strip-unit($largest-rem);   /* $largest-unitless:   #{$largest-unitless}   */
+$huge-unitless:      strip-unit($huge-rem);      /* $huge-unitless:      #{$huge-unitless}      */
+$epic-unitless:      strip-unit($epic-rem);      /* $epic-unitless:      #{$epic-unitless}      */
+$epicisimo-unitless: strip-unit($epicisimo-rem); /* $epicisimo-unitless: #{$epicisimo-unitless} */
 
 $base-margin-rem: $small-rem;
 $big-break-margin-rem: $huge-rem;

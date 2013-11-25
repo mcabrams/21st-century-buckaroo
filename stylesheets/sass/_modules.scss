@@ -1,40 +1,72 @@
-.buckaroo-header, .about-me {
-  background: $lightRed;
+.buckaroo-header,
+.buckaroo-header-minified,
+.about-me {
+  background: $light-red;
 }
 
 .about-me {
-  color: antiqueWhite;
   padding-top: 0;
+  color: $antique-white;
+  text-align: center;
+}
+
+.buckaroo-header, .buckaroo-header-minified {
+  h1 {
+    font-family: 'Geomancy - Extra Bold';
+  }
 }
 
 .buckaroo-header {
   h1 {
-    font-family: 'Geomancy - Extra Bold';
+    @include rem-fallback(font-size, $larger-rem);
+    @include margin-bottom-rem-fallback(0, $larger-rem, $norm-unitless);
     text-align: center;
-    @include rem-fallback(font-size, $largest-rem);
-    @include margin-bottom-rem-fallback(0, $largest-rem, $norm-unitless);
+    @media screen and (min-width: 32rem) {
+      @include rem-fallback(font-size, $huge-rem);
+    }
   }
 }
 
-.about-me {
-  text-align: center;
+.buckaroo-header-minified {
+  @include rem-fallback(padding, $norm-rem);
+
+  @media screen and (min-width: 32rem) {
+    @include rem-fallback(padding, $norm-rem, $huge-rem);
+  }
+
+  h1 {
+    @include rem-fallback(font-size, $norm-rem);
+    @include margin-bottom-rem-fallback(0, $norm-rem, $norm-unitless);
+    @include rem-fallback(max-width, 48rem);
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+
+    @media screen and (min-width: 32rem) {
+      @include rem-fallback(font-size, $large-rem);
+    }
+  }
 }
 
 .articles-feed {
   list-style: none;
 
   li {
-    border-bottom: 1px $brownBlack solid;
     @include rem-fallback(margin-bottom, $norm-rem);
     @include rem-fallback(padding-bottom, $norm-rem);
+    border-bottom: 1px $brown-black dashed;
+    @media screen and (min-width: 32rem) {
+      @include rem-fallback(margin-bottom, $largest-rem);
+      @include rem-fallback(padding-bottom, $largest-rem);
+    }
 
     h1 {
       @include margin-bottom-rem-fallback($large-rem, $norm-unitless, $norm-rem);
     }
 
     time {
-      display: block;
       @include rem-fallback(margin-bottom, $norm-rem);
+      display: block;
     }
 
     &:last-child {
@@ -46,6 +78,6 @@
 }
 
 .article-snippet {
-  text-indent: 0;
   @include rem-fallback(padding-bottom, $norm-rem);
+  text-indent: 0;
 }

@@ -18,9 +18,9 @@
 
 .buckaroo-header {
   h1 {
+    text-align: center;
     @include rem-fallback(font-size, $larger-rem);
     @include margin-bottom-rem-fallback(0, $larger-rem, $norm-unitless);
-    text-align: center;
     @media screen and (min-width: 32rem) {
       @include rem-fallback(font-size, $huge-rem);
     }
@@ -61,7 +61,7 @@
     }
 
     h1 {
-      @include margin-bottom-rem-fallback($large-rem, $norm-unitless, $norm-rem);
+      @include secondary-headline;
     }
 
     time {

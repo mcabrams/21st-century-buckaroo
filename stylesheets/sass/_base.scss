@@ -6,10 +6,12 @@
 
 $white: #fff;
 $brown-black: #221d1a;
+$brown-black: #423d39;
 $yellow: #ff7;
 $light-blue: #e7faff;
 $light-red: #ec7a6a;
 $antique-white: #e8e2d2;
+$antique-whiter: #f0eCe4;
 
 // ---------------------------------------------------------------------------
 // Base Styles
@@ -19,6 +21,16 @@ body {
   background-color: $antique-white;
   color: $brown-black;
 }
+
+img {
+  @include rem-fallback(max-width, 16rem);
+  height: auto;
+  float: right;
+  margin-top: 1rem;
+  margin-left: 1rem;
+  border: 1rem $antique-whiter solid;
+}
+
 
 a:link {
   display: inline-block;

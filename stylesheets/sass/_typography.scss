@@ -122,9 +122,44 @@ h1, h2, h3, h4, h5, h6 {
   line-height: $norm-unitless;
 }
 
-h1 {
+time {
+  line-height: 1;
+}
+
+@mixin primary-headline {
+  line-height: 1.1;
   @include rem-fallback(font-size, $large-rem);
-  @include margin-bottom-rem-fallback($smaller-rem, $large-rem, $norm-unitless);
+  @include margin-bottom-rem-fallback($norm-rem, $large-rem, 1.1);
+
+  @media screen and (min-width: 32rem) {
+    @include rem-fallback(font-size, $huge-rem);
+  }
+
+  @media screen and (min-width: 48rem) {
+    @include rem-fallback(font-size, $epic-rem);
+  }
+}
+
+@mixin secondary-headline {
+  line-height: 1.2;
+  @include rem-fallback(font-size, $norm-rem);
+  @include margin-bottom-rem-fallback($norm-rem, $norm-rem, 1.2);
+
+  @media screen and (min-width: 32rem) {
+    @include rem-fallback(font-size, $larger-rem);
+  }
+
+  @media screen and (min-width: 48rem) {
+    @include rem-fallback(font-size, $larger-rem);
+  }
+}
+
+h1 {
+  @include primary-headline;
+}
+
+h2 {
+  @include secondary-headline;
 }
 
 p {
